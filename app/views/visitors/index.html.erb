@@ -1,2 +1,5 @@
 <h1>Visitors#index</h1>
 <p>Find me in app/views/visitors/index.html.erb</p>
+<% cache 'word-of-the-hour', expires_in: Time.now.beginning_of_hour + 1.hour do %>
+  <%= %w(happy developer watch drifting ruby screencasts about rails).sample %>
+<% end %>
